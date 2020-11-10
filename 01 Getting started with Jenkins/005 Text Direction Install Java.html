@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>005 Text Direction Install Java</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <h4>Configure Java_Home on Windows:</h4>
+
+<ul><li>Right click My Computer and select Properties.</li><li>On the Advanced tab, select Environment Variables, and then edit JAVA_HOME to point to where the JDK software is located, for example, C:\Program Files\Java\jdk1.6.0_02</li></ul>
+
+
+
+
+
+
+
+<h4>Configure Java_Home on Linux:</h4>
+
+
+
+
+
+<ul><li>Login to your account and open the startup script file which is usually <code>~/.bash_profile</code>  file (or can be <code>.bashrc</code> depending on your envrionment settings)</li></ul>
+
+
+
+
+
+<p><code>$ vi ~/.bash_profile</code></p>
+
+
+
+
+
+<p>In the startup script, set <code>JAVA_HOME</code>  and <code>PATH</code> </p>
+
+<p>C shell:</p>
+
+<pre class="prettyprint linenums">setenv JAVA_HOME jdk-install-dir
+setenv PATH $JAVA_HOME/bin:$PATH
+export PATH=$JAVA_HOME/bin:$PATH
+</pre>
+
+
+
+
+
+
+
+<p><code>jdk-install-dir</code>  is the JDK installation director, which should be something similar to <code>/usr/java/jdk1.5.0_07/bin/java</code></p>
+
+<p>Bourne shell:</p>
+
+<pre class="prettyprint linenums">JAVA_HOME=jdk-install-dir
+export JAVA_HOME
+PATH=$JAVA_HOME/bin:$PATH
+export PATH</pre>
+
+
+
+
+
+
+
+<p>Korn and bash shells:</p>
+
+<pre class="prettyprint linenums">export JAVA_HOME=jdk-install-dir
+export PATH=$JAVA_HOME/bin:$PATH</pre>
+
+
+
+
+
+
+
+<p>Type the following command to activate the new path settings immediately:</p>
+
+<p><code>$ source ~/.bash_profile</code> </p>
+
+<p>Verify new settings:<br><code>$ echo $JAVA_HOME</code></p>
+
+<p><code>$ echo $PATH</code></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
